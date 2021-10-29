@@ -1,7 +1,6 @@
 ﻿#include <iostream> 
 #include <clocale>
 int i,k,c;
-bool f=false;
 using namespace std;
 int n = rand() % 100;
 int main()
