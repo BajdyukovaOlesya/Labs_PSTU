@@ -2,26 +2,23 @@
 #include <clocale>
 using namespace std;
 int x, a, b, c,a1,b1,c1,a2,b2,c2 ;
-bool f = false;
+bool p, f = false;
 int main()
 {
 	setlocale(LC_ALL, "ru");
   cout<<"введите число"\n;
   cin>>x;
   a = x % 10;
-  x = x / 10;
-  b = x % 10;
-  c = x / 10;
-  x = x * 10;
+  b = x / 10 % 10;
+  c = x / 100;
   while (f == false)
   {
-	  if ((a == b) || (b == c) || (a == c)|| (x < 100) || (x > 999)) {
+	  p = (a == b) || (b == c) || (a == c)|| (x < 100) || (x > 999);
+	  if (p==1) {
 		  cout << "Число должно быть трехзначным и цифры в числе не могут повторяться. Введите новое число\n"; cin >> x;
 		  a = x % 10;
-		  x = x / 10;
-		  b = x % 10;
-		  c = x / 10;
-		  x = x * 10;
+		  b = x / 10 % 10;
+		  c = x / 100;
 	  }
 	  else f = true;
   }
