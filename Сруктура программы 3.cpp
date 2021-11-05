@@ -1,7 +1,7 @@
 ﻿
 
 #include <iostream> // Подключение директивы ввода-вывода
-using namespace std; // Пространоство имен
+using namespace std; // Пространство имен
 int  a = 20; //объявление переременной 
 const int b = 10; // объявление константы
 int main()
