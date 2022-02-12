@@ -1,0 +1,41 @@
+#include <iostream>
+#include <clocale>
+using namespace std;
+bool f;
+int main()
+{
+    int mas[6];
+    for (int i = 0; i < 6; i++)
+        mas[i] = rand() % 9;
+    for (int i = 0; i < 6; i++)
+        cout<< mas[i];
+    cout << endl;
+    int d = 6/ 2;
+    for (int i = 0; i<6-d; i++)
+    {
+        if (mas[i] > mas[i + d]) {
+            int y = mas[i];
+            mas[i] = mas[i + d];
+            mas[i + d] = y;
+        }
+    }  
+     d = d / 2;
+    while (d != 0) {
+        for (int i = d; i <= 6 - d; i++) {
+            int j = i - d;
+            int y = mas[i];
+            f = false;
+            while ((j >= 0) && (!f)) {
+                if (y < mas[j]) {
+                    mas[j + d] = mas[j]; j -= d;
+                }
+                else f = true;
+            }
+            mas[j + d] = y;
+        }
+        d = d / 2;
+    }
+    for (int i = 0; i < 6; i++)
+        cout << mas[i];
+      return 0;
+}
