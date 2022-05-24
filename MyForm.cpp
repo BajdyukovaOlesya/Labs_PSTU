@@ -8,7 +8,7 @@ void main(array<String^>^arg) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-   Калькулятор::MyForm form;
+    РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ::MyForm form;
 	Application::Run(% form);
 }
 
